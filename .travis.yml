@@ -1,0 +1,12 @@
+language: csharp
+mono: latest
+script:
+- msbuild
+solution: All.sln
+notifications:
+  slack:
+    on_failure: always
+    on_pull_requests: true
+    on_success: always
+    rooms:
+      secure: 0Armd3yu27HbKjWNV53XgpAOXXDerxQhGXCsBi2d5b+vXukeJfK2deKwfS6uE2l5AYCjG0vH436gGf4K6bygQ8RUFy4Oysl3atoC3bZ2V1lBsyBlWEvrtZpkH2uvVXXxo82RFkYgdfr3Zp0PKb4aiVhR7laeMyD62e6sRquUescUH3teeDwDR9DCDNrZI/a0VJr3VUE+T33s0gfs0tB3g8c7MjoKvGf/lY7KA0hM0v1r8fBhF7ZP5tisxhQI0djHlMbWfLhuQbmmC7sNg2N5lijNaq3cIk0mJAQ4eY6cjN+2mSu+cX4JxfDnLsnWfNr4uIcfDkKWY12JKOzGWrrBD98Va2Jh9xH00GObUUo4UbvrwkyGQOqK+izCGa9LDA5uZJQYPg9pHXTM3t9hsl/VZ36p7ikn5yXSZnTrJs9yyfxvT6IyDYYq6OGe5A4pBPzxLB698czRGkAgte+KP8UlUCD/tMj5Jo/dpYEsyQvgZCYudCQwjfF7LPvDjjWLE2wbvaE3PVSvHLh0lRbd/BP8BaRie00lgGBkCYkSUdyqog8qRpj0ttaHeFjoKQyBgkKHKEoI38K6mqMAeBVfGlMu582z/VV4bWABk3Gj/7mg8YceCWhGT/8HSQfyMuMMCaJwtTOAJU87YZQvkKz9SuSDJ05vC1GB7SridbprrbmvgEo=
