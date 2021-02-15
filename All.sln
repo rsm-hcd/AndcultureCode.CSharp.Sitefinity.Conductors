@@ -10,22 +10,13 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Production|Any CPU = Production|Any CPU
 		Release|Any CPU = Release|Any CPU
-		Staging|Any CPU = Staging|Any CPU
-		Testing|Any CPU = Testing|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Production|Any CPU.ActiveCfg = Production|Any CPU
-		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Production|Any CPU.Build.0 = Production|Any CPU
 		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
-		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Staging|Any CPU.Build.0 = Staging|Any CPU
-		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
-		{CBA4BE60-754D-4BC4-AE6A-2E70DE0B54DD}.Testing|Any CPU.Build.0 = Testing|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

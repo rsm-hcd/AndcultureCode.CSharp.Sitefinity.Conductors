@@ -33,20 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Production\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
-    <OutputPath>bin\Staging\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Testing|AnyCPU'">
-    <OutputPath>bin\Testing\</OutputPath>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AndcultureCode.CSharp.Core, Version=0.8.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AndcultureCode.CSharp.Core.0.8.3\lib\netstandard2.0\AndcultureCode.CSharp.Core.dll</HintPath>
