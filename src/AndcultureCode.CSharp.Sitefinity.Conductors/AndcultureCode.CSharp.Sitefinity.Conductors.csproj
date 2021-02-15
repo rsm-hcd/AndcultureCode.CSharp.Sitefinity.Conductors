@@ -40,8 +40,8 @@
     <Reference Include="AndcultureCode.CSharp.Extensions, Version=0.4.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AndcultureCode.CSharp.Extensions.0.4.5\lib\netstandard2.0\AndcultureCode.CSharp.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="AndcultureCode.CSharp.Sitefinity.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AndcultureCode.CSharp.Sitefinity.Core.1.0.0\lib\net48\AndcultureCode.CSharp.Sitefinity.Core.dll</HintPath>
+    <Reference Include="AndcultureCode.CSharp.Sitefinity.Core, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AndcultureCode.CSharp.Sitefinity.Core.1.0.1\lib\net48\AndcultureCode.CSharp.Sitefinity.Core.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
