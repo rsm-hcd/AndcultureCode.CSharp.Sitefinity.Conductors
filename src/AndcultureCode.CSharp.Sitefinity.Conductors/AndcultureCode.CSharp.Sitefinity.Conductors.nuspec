@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>$id$</id>
+        <version>$version$</version>
+        <title>$title$</title>
+        <description>$description$</description>
+        <authors>$author$</authors>
+        <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+        <projectUrl>https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Conductors</projectUrl>
+        <iconUrl>https://github.com/AndcultureCode/AndcultureCode/blob/main/assets/andculture-glyph@2x.png?raw=true</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>Initial release of the package.</releaseNotes>
+        <copyright>$copyright$</copyright>
+        <language>en-US</language>
+        <tags>sitefinity</tags>
+
+        <dependencies>
+            <group targetFramework="net48">
+                <dependency id="Telerik.Sitefinity.Core" version="13.2.7500" />
+            </group>
+        </dependencies>
+    </metadata>
+</package>
