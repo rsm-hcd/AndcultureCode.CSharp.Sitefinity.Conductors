@@ -49,7 +49,7 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
         }
 
         /// <summary>
-        /// Gets live content from the dynamic module manager by type, and optionally applies a filter.
+        /// Gets live content from the dynamic module manager by type and optionally applies a filter.
         /// </summary>
         /// <param name="contentType">String representation of the content type.</param>
         /// <param name="filter">Optional filter to apply to result set.</param>
@@ -60,7 +60,7 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
         ) => GetContentByType(contentType, ContentLifecycleStatus.Live, filter);
 
         /// <summary>
-        /// Gets content from the dynamic module manager by type, and optionally applies a filter.
+        /// Gets content from the dynamic module manager by type and optionally applies a filter.
         /// </summary>
         /// <param name="contentType">String representation of the content type.</param>
         /// <param name="status">Status of the content you want returned. Null returns content in all statuses.</param>
