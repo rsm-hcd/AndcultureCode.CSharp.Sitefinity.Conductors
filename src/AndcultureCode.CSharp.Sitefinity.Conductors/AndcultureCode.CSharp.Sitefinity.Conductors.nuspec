@@ -14,5 +14,11 @@
         <copyright>$copyright$</copyright>
         <language>en-US</language>
         <tags>sitefinity</tags>
+
+        <dependencies>
+            <group targetFramework="net48">
+                <dependency id="Telerik.Sitefinity.Core" version="13.2.7500" />
+            </group>
+        </dependencies>
     </metadata>
 </package>
