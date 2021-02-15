@@ -91,7 +91,7 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
                 r.AddErrorAndLog(
                     _logger,
                     ERROR_FAILED_TO_GET_DYNAMIC_MODULE_MANAGER,
-                    $"Attempt to get dynamic module manager with provider name {providerName} in method {nameof(GetContentByType)} returned null or empty."
+                    $"Attempt to get dynamic module manager with provider name {providerName} in method {nameof(GetContentByType)} returned null."
                 );
                 return null;
             }
