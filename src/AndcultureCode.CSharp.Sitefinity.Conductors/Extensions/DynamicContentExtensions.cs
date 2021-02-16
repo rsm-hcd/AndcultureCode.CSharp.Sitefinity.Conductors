@@ -35,7 +35,6 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Extensions
 
             var resolvedDynamicContentType = TypeResolutionService.ResolveType(dynamicContentType);
 
-            // TODO: should this be done in the constructor?
             var dynamicModuleManager = DynamicModuleManager.GetManager(providerName);
             var dataItem = dynamicModuleManager.CreateDataItem(resolvedDynamicContentType);
 
@@ -95,7 +94,6 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Extensions
 
                 var contentItemType = TypeResolutionService.ResolveType(relatedDynamicContentType.ToString());
 
-                // TODO: should this be done in the constructor?
                 var dynamicModuleManager = DynamicModuleManager.GetManager(providerName);
                 var dynamicContentItem = dynamicModuleManager.GetDataItem(contentItemType, sitefinityContentItem.Id);
 
