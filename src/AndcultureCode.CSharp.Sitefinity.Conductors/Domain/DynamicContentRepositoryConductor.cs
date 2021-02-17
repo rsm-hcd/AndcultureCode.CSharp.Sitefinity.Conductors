@@ -60,7 +60,6 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
 
             var dataItem = item.SetDataItemProperties(properties, DefaultProviderName);
 
-            // TODO: shouldn't this be done in the constructor?
             var dynamicModuleManager = DynamicModuleManager.GetManager(DefaultProviderName);
             dynamicModuleManager.SaveChanges();
 
