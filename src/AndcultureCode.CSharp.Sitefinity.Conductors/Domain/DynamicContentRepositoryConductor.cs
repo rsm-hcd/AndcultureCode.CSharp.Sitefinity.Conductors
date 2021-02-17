@@ -2,7 +2,6 @@
 using AndcultureCode.CSharp.Core.Extensions;
 using AndcultureCode.CSharp.Core.Interfaces;
 using AndcultureCode.CSharp.Sitefinity.Conductors.Extensions;
-using AndcultureCode.CSharp.Sitefinity.Core.Attributes;
 using AndcultureCode.CSharp.Sitefinity.Core.Interfaces;
 using AndcultureCode.CSharp.Sitefinity.Core.Models.Content;
 using Microsoft.Extensions.Logging;
@@ -13,7 +12,6 @@ using System.Reflection;
 using Telerik.Sitefinity.DynamicModules;
 using Telerik.Sitefinity.DynamicModules.Model;
 using Telerik.Sitefinity.GenericContent.Model;
-using Telerik.Sitefinity.Model;
 using Telerik.Sitefinity.Utilities.TypeConverters;
 
 namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
