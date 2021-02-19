@@ -329,7 +329,13 @@
   <ItemGroup>
     <Compile Include="Domain\DynamicContentRepositoryConductor.cs" />
     <Compile Include="Extensions\DynamicContentExtensions.cs" />
+    <Compile Include="OrderingBase.cs" />
+    <Compile Include="OrderingBaseExtensions.cs" />
+    <Compile Include="OrderingDirection.cs" />
+    <Compile Include="OrderingParameter.cs" />
+    <Compile Include="OrderingUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
