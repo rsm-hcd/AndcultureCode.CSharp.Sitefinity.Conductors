@@ -81,12 +81,16 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Extensions
             if (property.PropertyType.IsEnum)
             {
                 dataItem.SetValue(property.Name, item.GetType().GetProperty(property.Name)?.GetValue(item)?.ToString());
+                return;
             }
-            else if (!sitefinityContentSubclass && !contentSubclass)
+
+            if (!sitefinityContentSubclass && !contentSubclass)
             {
                 dataItem.SetValue(property.Name, item.GetType().GetProperty(property.Name)?.GetValue(item));
+                return;
             }
-            else if (sitefinityContentSubclass)
+
+            if (sitefinityContentSubclass)
             {
                 dataItem = SetPropertyInDataItemAsRelationship(
                     item,
@@ -95,6 +99,7 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Extensions
                     dataItem,
                     providerName
                 );
+                return;
             }
         }
 
