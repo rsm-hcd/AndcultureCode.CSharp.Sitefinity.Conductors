@@ -1,11 +1,8 @@
 ﻿using AndcultureCode.CSharp.Sitefinity.Core.Attributes;
 using AndcultureCode.CSharp.Sitefinity.Core.Models.Content;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Telerik.Sitefinity.DynamicModules;
 using Telerik.Sitefinity.DynamicModules.Model;
 using Telerik.Sitefinity.GenericContent.Model;
@@ -80,7 +77,12 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Extensions
             var sitefinityContentSubclass = property.PropertyType.IsSubclassOf(typeof(SitefinityContent));
             var contentSubclass = property.PropertyType.IsSubclassOf(typeof(Content));
 
-            if (!sitefinityContentSubclass && !contentSubclass)
+            // Enums must be adapted to a string value since Sitefinity stores them as a string
+            if (property.PropertyType.IsEnum)
+            {
+                dataItem.SetValue(property.Name, item.GetType().GetProperty(property.Name)?.GetValue(item)?.ToString());
+            }
+            else if (!sitefinityContentSubclass && !contentSubclass)
             {
                 dataItem.SetValue(property.Name, item.GetType().GetProperty(property.Name)?.GetValue(item));
             }
