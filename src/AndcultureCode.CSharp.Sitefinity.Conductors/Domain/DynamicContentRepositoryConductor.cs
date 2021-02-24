@@ -2,6 +2,7 @@
 using AndcultureCode.CSharp.Core.Extensions;
 using AndcultureCode.CSharp.Core.Interfaces;
 using AndcultureCode.CSharp.Sitefinity.Conductors.Extensions;
+using AndcultureCode.CSharp.Sitefinity.Core.Constants;
 using AndcultureCode.CSharp.Sitefinity.Core.Interfaces;
 using AndcultureCode.CSharp.Sitefinity.Core.Models.Content;
 using Microsoft.Extensions.Logging;
@@ -70,7 +71,8 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
 
             if (publish)
             {
-                dynamicModuleManager.Lifecycle.Publish(dataItem);
+                dataItem.ApprovalWorkflowState = ApprovalWorkflowStates.PUBLISHED;
+                dataItem = (DynamicContent) dynamicModuleManager.Lifecycle.Publish(dataItem);
             }
 
             return dataItem;
