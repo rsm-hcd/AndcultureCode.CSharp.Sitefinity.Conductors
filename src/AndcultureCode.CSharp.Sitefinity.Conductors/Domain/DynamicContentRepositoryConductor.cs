@@ -73,6 +73,8 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
             {
                 dataItem.ApprovalWorkflowState = ApprovalWorkflowStates.PUBLISHED;
                 dataItem = (DynamicContent) dynamicModuleManager.Lifecycle.Publish(dataItem);
+
+                dynamicModuleManager.SaveChanges();
             }
 
             return dataItem;
