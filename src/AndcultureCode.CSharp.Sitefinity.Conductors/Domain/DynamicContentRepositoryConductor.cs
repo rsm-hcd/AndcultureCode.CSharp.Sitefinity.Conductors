@@ -2,6 +2,7 @@
 using AndcultureCode.CSharp.Core.Extensions;
 using AndcultureCode.CSharp.Core.Interfaces;
 using AndcultureCode.CSharp.Sitefinity.Conductors.Extensions;
+using AndcultureCode.CSharp.Sitefinity.Core.Constants;
 using AndcultureCode.CSharp.Sitefinity.Core.Interfaces;
 using AndcultureCode.CSharp.Sitefinity.Core.Models.Content;
 using Microsoft.Extensions.Logging;
@@ -51,7 +52,14 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
             _logger = logger;
         }
 
-        public IResult<DynamicContent> Create<T>(T item) where T : SitefinityContent => Do<DynamicContent>.Try((r) =>
+        /// <summary>
+        /// Creates a dynamic content item of the specified type T.
+        /// </summary>
+        /// <typeparam name="T">A subclass of SitefinityContent.</typeparam>
+        /// <param name="item"></param>
+        /// <param name="publish">Flag denoting whether or not to publish the item after creating it. Defaults to false</param>
+        /// <returns></returns>
+        public IResult<DynamicContent> Create<T>(T item, bool publish) where T : SitefinityContent => Do<DynamicContent>.Try((r) =>
         {
             var type = typeof(T);
             var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
@@ -60,6 +68,12 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
 
             var dynamicModuleManager = DynamicModuleManager.GetManager(DefaultProviderName);
             dynamicModuleManager.SaveChanges();
+
+            if (publish)
+            {
+                dataItem.ApprovalWorkflowState = ApprovalWorkflowStates.PUBLISHED;
+                dataItem = (DynamicContent) dynamicModuleManager.Lifecycle.Publish(dataItem);
+            }
 
             return dataItem;
         })
