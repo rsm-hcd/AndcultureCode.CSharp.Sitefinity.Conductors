@@ -51,7 +51,14 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
             _logger = logger;
         }
 
-        public IResult<DynamicContent> Create<T>(T item) where T : SitefinityContent => Do<DynamicContent>.Try((r) =>
+        /// <summary>
+        /// Creates a dynamic content item of the specified type T.
+        /// </summary>
+        /// <typeparam name="T">A subclass of SitefinityContent.</typeparam>
+        /// <param name="item"></param>
+        /// <param name="publish">Flag denoting whether or not to publish the item after creating it. Defaults to false</param>
+        /// <returns></returns>
+        public IResult<DynamicContent> Create<T>(T item, bool publish) where T : SitefinityContent => Do<DynamicContent>.Try((r) =>
         {
             var type = typeof(T);
             var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
@@ -60,6 +67,11 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Domain
 
             var dynamicModuleManager = DynamicModuleManager.GetManager(DefaultProviderName);
             dynamicModuleManager.SaveChanges();
+
+            if (publish)
+            {
+                dynamicModuleManager.Lifecycle.Publish(dataItem);
+            }
 
             return dataItem;
         })
