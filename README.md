@@ -8,7 +8,7 @@ Shared code for the business layer in our onion architecture for Sitefinity proj
 
 ## Sitefinity Version Support
 - Compatibility: 13+
-- Tested with: 13.2 (build 7521)
+- Tested with: 13.3 (build 7625)
 
 ## Getting Started
 
