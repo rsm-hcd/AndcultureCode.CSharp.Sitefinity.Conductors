@@ -1,6 +1,7 @@
 ﻿using AndcultureCode.CSharp.Sitefinity.Core.Attributes;
 using AndcultureCode.CSharp.Sitefinity.Core.Models.Content;
 using System;
+using System.Collections;
 using System.Linq;
 using System.Reflection;
 using Telerik.Sitefinity.DynamicModules;
@@ -81,6 +82,12 @@ namespace AndcultureCode.CSharp.Sitefinity.Conductors.Extensions
             if (property.PropertyType.IsEnum)
             {
                 dataItem.SetValue(property.Name, item.GetType().GetProperty(property.Name)?.GetValue(item)?.ToString());
+                return;
+            }
+
+            if (property.GetMethod.ReturnType.Namespace == "System.Collections.Generic")
+            {
+                // need to ignore types that are lists... not trying to map the entire object
                 return;
             }
 

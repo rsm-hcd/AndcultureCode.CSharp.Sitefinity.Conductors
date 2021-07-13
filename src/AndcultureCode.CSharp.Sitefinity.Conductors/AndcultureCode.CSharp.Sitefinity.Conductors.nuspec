@@ -17,7 +17,7 @@
 
         <dependencies>
             <group targetFramework="net48">
-                <dependency id="Telerik.Sitefinity.Core" version="13.2.7500" />
+                <dependency id="Telerik.Sitefinity.Core" version="13.3.7525" />
             </group>
         </dependencies>
     </metadata>
