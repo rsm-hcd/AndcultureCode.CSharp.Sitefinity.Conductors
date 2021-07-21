@@ -1,6 +1,6 @@
 # AndcultureCode.CSharp.Sitefinity.Conductors
 
-[![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Conductors.svg?branch=main)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Conductors)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+![build status](https://github.com/AndcultureCode/AndcultureCode.CSharp.Sitefinity.Conductors/actions/workflows/build.yaml/badge.svg)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
