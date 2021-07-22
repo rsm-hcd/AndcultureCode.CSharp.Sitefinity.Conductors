@@ -32,8 +32,14 @@ jobs:
             - name: Setup MSBuild.exe
               uses: microsoft/setup-msbuild@v1.0.2
 
+            - name: Setup NuGet
+              uses: NuGet/setup-nuget@v1.0.5
+
+            - name: nuget restore
+              run: nuget restore All.sln
+
             - name: msbuild
-              run: msbuild /t:Restore
+              run: msbuild All.sln
 
     notify_success:
         runs-on: ubuntu-latest
